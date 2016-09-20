@@ -14,9 +14,10 @@ public class BinarySearch {
 		
 		int[] primesCopy = primes;
 		System.out.println(Arrays.toString(primesCopy));
-		doSwap(primesCopy, 0, 2);
+		SelectionSort.doSwap(primesCopy, 0, 2);
 		System.out.println(Arrays.toString(primesCopy));
-		
+		System.out.println(SelectionSort.indexOfMinimum(primes, 5));
+
 	}
 	
 
@@ -55,10 +56,6 @@ public class BinarySearch {
 		}
 	}
 	
-	public static void doSwap(int[] array, int firstIndex, int secondIndex){
-		int copyFirstIndex = array[firstIndex];
-		array[firstIndex] = array[secondIndex];
-		array[secondIndex] = copyFirstIndex;
-		
-	}
+
+	
 }
