@@ -1,5 +1,6 @@
 package main;
 
+import java.util.Arrays;
 
 public class BinarySearch {
 
@@ -10,6 +11,11 @@ public class BinarySearch {
 		int result = doSearch(primes, x);
 		
 		printStatements(primes, result);
+		
+		int[] primesCopy = primes;
+		System.out.println(Arrays.toString(primesCopy));
+		doSwap(primesCopy, 0, 2);
+		System.out.println(Arrays.toString(primesCopy));
 		
 	}
 	
@@ -47,5 +53,12 @@ public class BinarySearch {
 		else {
 			System.out.println("The number is not prime");
 		}
+	}
+	
+	public static void doSwap(int[] array, int firstIndex, int secondIndex){
+		int copyFirstIndex = array[firstIndex];
+		array[firstIndex] = array[secondIndex];
+		array[secondIndex] = copyFirstIndex;
+		
 	}
 }
