@@ -6,6 +6,7 @@ public class BinarySearch {
 
 	public static void main(String args[]){
 		int[] primes = {2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97};
+		int[] unsorted = {12, 5, 60, 14, 13, 78};
 		
 		int x = 67;
 		int result = doSearch(primes, x);
@@ -18,6 +19,8 @@ public class BinarySearch {
 		System.out.println(Arrays.toString(primesCopy));
 		System.out.println(SelectionSort.indexOfMinimum(primes, 5));
 
+		System.out.println(Arrays.toString(SelectionSort.sortArray(unsorted)));
+		
 	}
 	
 

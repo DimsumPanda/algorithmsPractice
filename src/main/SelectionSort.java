@@ -1,6 +1,7 @@
 package main;
 
 public class SelectionSort {
+	
 	public static void doSwap(int[] array, int firstIndex, int secondIndex){
 		int copyFirstIndex = array[firstIndex];
 		array[firstIndex] = array[secondIndex];
@@ -19,5 +20,16 @@ public class SelectionSort {
 			}
 		}
 		return minIndex;
+	}
+	
+	public static int[] sortArray (int[] originalarray){
+		int[] array = originalarray;
+		for (int i = 0; i < array.length - 1; i++) {
+			int minIndex = indexOfMinimum(array, i);
+			if (minIndex != i){
+				doSwap(array, i, minIndex);
+			}
+		}
+		return array;
 	}
 }
